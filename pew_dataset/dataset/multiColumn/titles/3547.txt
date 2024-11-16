@@ -1,1 +1,0 @@
-Activity flags have both false positives and false negatives % of cellphone numbers based on dialing
