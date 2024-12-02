@@ -1,0 +1,53 @@
+{
+  "vocabulary": {
+    "<pad>": 0,
+    "<unk>": 1,
+    "<start>": 2,
+    "<end>": 3,
+    "<num>": 4,
+    "<decimal>": 5,
+    "<percent>": 6,
+    "<range>": 7,
+    "<year>": 8,
+    "<month>": 9,
+    "<date>": 10,
+    "<currency>": 11,
+    "<market>": 12,
+    "<increase>": 13,
+    "<decrease>": 14,
+    "<stable>": 15,
+    "<peak>": 16,
+    "<bottom>": 17,
+    "<higher>": 18,
+    "<lower>": 19,
+    "<equal>": 20
+  },
+  "special_tokens": {
+    "<pad>": 0,
+    "<unk>": 1,
+    "<start>": 2,
+    "<end>": 3,
+    "<num>": 4,
+    "<decimal>": 5,
+    "<percent>": 6,
+    "<range>": 7,
+    "<year>": 8,
+    "<month>": 9,
+    "<date>": 10,
+    "<currency>": 11,
+    "<market>": 12,
+    "<increase>": 13,
+    "<decrease>": 14,
+    "<stable>": 15,
+    "<peak>": 16,
+    "<bottom>": 17,
+    "<higher>": 18,
+    "<lower>": 19,
+    "<equal>": 20
+  },
+  "statistics": {
+    "total_size": 21,
+    "special_tokens": 21,
+    "regular_tokens": 0
+  }
+}
