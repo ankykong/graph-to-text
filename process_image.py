@@ -18,10 +18,7 @@ def process_image(base64_image, image_id):
 
     line = {
         'Image ID': image_id,
-        PROMPTS[0]: results[0],
-        PROMPTS[1]: results[1],
-        PROMPTS[2]: results[2],
-        PROMPTS[3]: results[3]}
+        PROMPTS[0]: results[0]}
 
     if provider == "ollama":
         time.sleep(1)  # Sleep for 1 second after each analysis

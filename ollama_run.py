@@ -1,8 +1,11 @@
 import csv
 import os
+import re
 import base64
-from process_image import process_image
+from process_image2 import process_image2
 from constants import CSV_FILENAME, FIELDNAMES
+from get_image_names import get_image_names
+from PIL import Image
 
 
 def read_image_as_base64(image_path):
@@ -13,7 +16,7 @@ def read_image_as_base64(image_path):
 
 def main():
     # Path to the images directory
-    images_dir = os.path.expanduser("/Users/ankurduggal/Downloads/graphs")
+    images_dir = os.path.expanduser("statista_dataset/dataset/imgs")
 
     # Get list of all image files in the directory
     image_files = [
@@ -34,12 +37,15 @@ def main():
             reader = csv.reader(csvfile)
             processed_count = sum(1 for row in reader) - 1  # Subtract header row
 
+    image_names = get_image_names()
+
     # Process images starting from where we left off
-    for image_file in image_files[processed_count:]:
+    for image_file in image_files:
         image_path = os.path.join(images_dir, image_file)
-        base64_image = read_image_as_base64(image_path)
-        image_id = image_file[:4]  # Get first 4 characters of filename
-        process_image(base64_image, image_id)
+        image = Image.open(image_path)
+        image_id = int(re.search(r'(\d+)', image_file).group(1))
+        if image_id in image_names:
+            process_image2(image, image_id)
 
 
 if __name__ == "__main__":

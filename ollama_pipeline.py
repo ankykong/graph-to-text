@@ -54,6 +54,7 @@ class OllamaPipeline:
 
         response = self.client.chat.completions.create(
             model=self.model,
-            messages=messages
+            messages=messages,
+            max_completion_tokens=50
         )
         return response.choices[0].message.content
